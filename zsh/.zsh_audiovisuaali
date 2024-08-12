@@ -1,0 +1,41 @@
+alias configzsh="nvim ~/.zshrc"
+alias confignvim='nvim ~/.config/nvim'
+
+myip () {
+    echo "Local IPs:"
+    ifconfig | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/%.*//'
+
+    # Displaying public IP
+    echo 
+    echo "Public IP:"
+    echo $(curl -s https://ifconfig.me)
+}
+
+cargo() {
+    if [ "$1" = "dev" ]; then
+        shift        # eat the 'update'
+        cargo watch -x 'run'
+    else 
+        command cargo "$@"
+    fi
+}
+
+alias dsa='docker stop $(docker ps -q)'
+alias dps='docker ps'
+alias dcupd='docker compose up -d'
+alias dcup='docker compose up'
+alias dcdown='docker compose down'
+alias p='pnpm'
+alias tsc='npm run typecheck'
+alias tscc='npm run typescript-check'
+
+alias vim='nvim'
+alias lsl='ls -1A'
+alias r='cd && clear'
+alias e='exit'
+alias ta='tmux attach'
+alias c='clear'
+alias ts='cd ~/srv/ts-playground && nvim .'
+alias k='kaukkari'
+
+
