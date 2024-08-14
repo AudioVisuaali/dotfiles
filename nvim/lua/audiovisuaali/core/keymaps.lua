@@ -30,6 +30,11 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>yw", '"+yiw')
 
+vim.keymap.set("n", "<leader>ql", "<cmd>cclose<CR>", { desc = "Close quickfix" })
+vim.keymap.set("n", "<leader>qf", "<cmd>copen<CR>", { desc = "Open quickfix" })
+vim.keymap.set("n", "<c-n>", "<cmd>cnext<CR>zz", { noremap = true, silent = true, desc = "Next location" })
+vim.keymap.set("n", "<c-p>", "<cmd>cprev<CR>zz", { noremap = true, silent = true, desc = "Previous location" })
+
 vim.api.nvim_set_keymap("n", "<C-d>", "10jzz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "10kzz", { noremap = true })
 
