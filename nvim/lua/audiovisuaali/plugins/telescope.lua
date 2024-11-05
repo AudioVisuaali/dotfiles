@@ -24,6 +24,14 @@ return {
 			desc = "Lists Diagnostics for all open buffers or a specific buffer",
 		},
 		{
+			"fr",
+			function()
+				local builtin = require("telescope.builtin")
+				builtin.lsp_references()
+			end,
+			desc = "Lists Function names, variables, from Treesitter",
+		},
+		{
 			";s",
 			function()
 				local builtin = require("telescope.builtin")

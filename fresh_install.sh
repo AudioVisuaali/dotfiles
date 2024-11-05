@@ -24,11 +24,13 @@ brew install tmux
 # Plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+# In tmux do ctrl + B + I to install 
 
 # Neovim
 ln -s ~/.dotfiles/nvim ~/.config/nvim/
 brew install neovim
 tmux source ~/.tmux.conf
+# Install ripgrep for fast search
 
 # Languages
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -38,3 +40,7 @@ curl -fsSL https://fnm.vercel.app/install | bash
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 echo 'eval "$(zoxide init zsh)"' >>~/.zshrc
 
+# OSX
+defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
+
+git config --global push.autoSetupRemote true
