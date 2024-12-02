@@ -48,7 +48,6 @@ alias e='exit'
 alias ta='tmux attach'
 alias c='clear'
 alias ts='cd ~/srv/ts-playground && nvim .'
-alias k='kaukkari'
 
 eval "$(zoxide init --cmd cd zsh)"
 

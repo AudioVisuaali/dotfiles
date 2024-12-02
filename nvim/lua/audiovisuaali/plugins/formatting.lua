@@ -18,7 +18,7 @@ return {
 	config = function()
 		local conform = require("conform")
 
-		local js_formatter = file_exists_in_current_directory("biome.json") and { "biome" } or { "eslint_d" }
+		local js_formatter = file_exists_in_current_directory("biome.json") and { "biome" } or { "prettier" }
 
 		conform.setup({
 			formatters_by_ft = {

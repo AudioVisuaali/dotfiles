@@ -19,7 +19,7 @@ require("lazy").setup({
 			-- load the colorscheme here
 			vim.cmd([[colorscheme rose-pine-moon]])
 
-			vim.cmd([[highlight Normal guibg=#1b1b1b]])
+			vim.cmd([[highlight Normal guibg=#242424]])
 		end,
 	},
 	{ import = "audiovisuaali.plugins" },

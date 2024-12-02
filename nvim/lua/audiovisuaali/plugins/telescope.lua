@@ -120,8 +120,8 @@ return {
 						["<Shift-u>"] = actions.preview_scrolling_up,
 						["<Shift-d>"] = actions.preview_scrolling_down,
 
-						["<C-d>"] = actions.results_scrolling_up,
-						["<C-u>"] = actions.results_scrolling_down,
+						["<C-u>"] = actions.results_scrolling_up,
+						["<C-d>"] = actions.results_scrolling_down,
 					},
 				},
 			},

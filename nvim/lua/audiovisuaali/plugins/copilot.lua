@@ -1,3 +1,4 @@
+--[[
 local function is_in_forbidden_directoyry()
 	local current_directory = vim.fn.getcwd()
 
@@ -7,8 +8,9 @@ local function is_in_forbidden_directoyry()
 		return false
 	end
 end
+]]
+--
 
 return {
 	"github/copilot.vim",
-	enabled = not is_in_forbidden_directoyry(),
 }
