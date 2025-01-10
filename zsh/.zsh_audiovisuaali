@@ -23,6 +23,19 @@ cargo() {
     fi
 }
 
+nvm() {
+    fnm "$@"
+}
+eval "$(fnm env)"
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    fnm use --install-if-missing
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 alias gp='git push'
 alias gpu='git pull'
 
